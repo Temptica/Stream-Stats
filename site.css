@@ -8,6 +8,7 @@
     --text-muted: #5f6b7a;
     --accent: #4f6ef7;
     --gold: #b7791f;
+    --on-accent: #ffffff;
     --radius: 10px;
     --font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
@@ -22,6 +23,7 @@
         --text-muted: #8b95a5;
         --accent: #7b93ff;
         --gold: #f6c56b;
+        --on-accent: #0f1115;
     }
 }
 
@@ -60,6 +62,8 @@ h2 { margin: 0; font-size: 1rem; }
 
 .page-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem; }
 .page-header h1 { margin: 0; }
+.page-title { min-width: 0; }
+.long-name { overflow-wrap: anywhere; }
 
 .tabs { display: flex; flex-wrap: wrap; gap: 0.25rem; background: var(--surface-muted); padding: 3px; border-radius: 8px; }
 .tabs a { padding: 0.25rem 0.75rem; border-radius: 6px; color: var(--text-muted); font-size: 0.85rem; }
@@ -83,6 +87,7 @@ h2 { margin: 0; font-size: 1rem; }
 .num { text-align: right; font-variant-numeric: tabular-nums; }
 .rank { width: 2rem; color: var(--text-muted); }
 .rank.top { color: var(--gold); font-weight: 700; }
+.name { width: 100%; max-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-bottom: 1rem; }
 .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 0.75rem 1rem; display: flex; flex-direction: column; }
@@ -102,3 +107,22 @@ h2 { margin: 0; font-size: 1rem; }
     background: var(--surface);
     color: var(--text);
 }
+
+.button { display: inline-block; padding: 0.4rem 0.9rem; border-radius: 8px; background: var(--accent); color: var(--on-accent); font-weight: 600; font-size: 0.9rem; }
+.button:hover { text-decoration: none; filter: brightness(1.08); }
+.page-header .button { margin-right: auto; }
+
+.intro { margin: 0 0 1rem; max-width: 70ch; }
+.jump { display: inline-flex; margin-bottom: 0.5rem; }
+.note { font-size: 0.8rem; margin: -0.5rem 0 0; }
+
+.scroll { overflow-x: auto; }
+.commands { min-width: 640px; }
+.commands td { vertical-align: top; }
+.commands td:first-child { width: 12rem; }
+.aliases { display: block; color: var(--text-muted); font-size: 0.8rem; }
+.nowrap { white-space: nowrap; }
+
+code { font-family: ui-monospace, "JetBrains Mono", monospace; font-size: 0.85em; background: var(--surface-muted); padding: 0.05rem 0.3rem; border-radius: 4px; }
+.list { margin: 0; padding-left: 1.25rem; }
+.list li { margin-bottom: 0.25rem; }

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Commands · Temptica&#x27;s stream stats</title>
+    <link rel="stylesheet" href="site.css" /></head>
+<body><header class="site-header"><a class="brand" href="index.html">Temptica&#x27;s stream stats</a>
+        <nav><a href="index.html">Leaderboards</a>
+            <a href="viewers/index.html">Find your stats</a>
+            <a href="commands.html">Commands</a></nav></header>
+    <main><header class="page-header"><h1>Commands and redeems</h1></header>
+    <p class="intro muted">Everything you can trigger on stream: chat commands, channel point redeems and clicking the overlay. If a cost or cooldown on Twitch differs from this page, Twitch is right.</p>
+
+    <nav class="tabs jump" aria-label="Sections"><a href="#chat">Chat commands</a>
+        <a href="#vip">VIPs and mods</a>
+        <a href="#redeems">Channel points</a>
+        <a href="#halloween">Halloween</a>
+        <a href="#overlay">Clicking the overlay</a></nav>
+
+    <h2 id="chat" class="section-title">Chat commands</h2>
+    <section class="panel scroll"><table class="table commands"><thead><tr><th>Command</th><th>What happens</th><th>How to use</th><th>Cooldown</th></tr></thead>
+            <tbody><tr><td><code>!commands</code><span class="aliases">!help, !command</span></td>
+                    <td>The bot lists the available commands.</td>
+                    <td></td>
+                    <td class="nowrap">none</td></tr>
+                <tr><td><code>!bm</code><span class="aliases">!ballamachina, !wishlist</span></td>
+                    <td>Info about Balla Machina, the pinball roguelike deck-builder Temptica is making, with the Steam wishlist link.</td>
+                    <td></td>
+                    <td class="nowrap">10 s</td></tr>
+                <tr><td><code>!credits</code><span class="aliases">!credit, !assets</span></td>
+                    <td>Who made the art and tools used on the overlay.</td>
+                    <td></td>
+                    <td class="nowrap">30 s</td></tr>
+                <tr><td><code>!tts</code></td>
+                    <td>Your message is read out loud by the text-to-speech voice, in the alert queue.</td>
+                    <td><code>!tts &lt;message&gt;</code>. Pick voices inline: <code>{alba}</code> <code>{jean}</code> <code>{george}</code> <code>{mary}</code> <code>{eve}</code> <code>{michael}</code>. Mix them: <code>{alba} psst {george} WHAT?</code></td>
+                    <td class="nowrap">none</td></tr>
+                <tr><td><code>!points</code><span class="aliases">!point, !punten</span></td>
+                    <td>How many points you have. You earn points by clicking fish on the overlay.</td>
+                    <td></td>
+                    <td class="nowrap">10 s each</td></tr>
+                <tr><td><code>!otter</code><span class="aliases">!tama, !tamagotter</span></td>
+                    <td>The Tamagotter's needs (hunger, thirst, energy, happiness) and what it needs most, or that it is doing great.</td>
+                    <td></td>
+                    <td class="nowrap">10 s</td></tr>
+                <tr><td><code>!setso</code></td>
+                    <td>Sets the personal text shown when someone gives you a shoutout.</td>
+                    <td><code>!setso [primary/blue/green/orange/purple] your text</code> sets it (color optional, max 500 characters). <code>!setso</code> shows yours, <code>!setso clear</code> removes it.</td>
+                    <td class="nowrap">10 s each</td></tr></tbody></table></section>
+    <p class="note muted">"each" means the cooldown is per viewer; otherwise it is shared by the whole chat.</p>
+
+    <h2 id="vip" class="section-title">VIPs and mods</h2>
+    <section class="panel scroll"><table class="table commands"><thead><tr><th>Command</th><th>What happens</th><th>How to use</th></tr></thead>
+            <tbody><tr><td><code>!sr</code><span class="aliases">!songrequest</span></td>
+                    <td>Adds a song to the Spotify queue.</td>
+                    <td>A Spotify track link, or a search like <code>!sr artist - song</code></td></tr>
+                <tr><td><code>!wrongsong</code><span class="aliases">!ws, !skiplast</span></td>
+                    <td>Removes your last song request, or one of yours by id.</td>
+                    <td>Optional song id</td></tr>
+                <tr><td><code>!song</code></td>
+                    <td>The song that is playing now.</td>
+                    <td></td></tr>
+                <tr><td><code>!lastsong</code><span class="aliases">!ls</span></td>
+                    <td>The previous song.</td>
+                    <td></td></tr>
+                <tr><td><code>!skip</code></td>
+                    <td>Skips the current song.</td>
+                    <td></td></tr>
+                <tr><td><code>!play</code> <code>!pause</code></td>
+                    <td>Resumes or pauses Spotify.</td>
+                    <td></td></tr>
+                <tr><td><code>!so</code></td>
+                    <td>Gives someone a shoutout, with their <code>!setso</code> text if they set one.</td>
+                    <td><code>!so &lt;username&gt;</code></td></tr></tbody></table></section>
+
+    <h2 id="redeems" class="section-title">Channel point redeems</h2>
+    <section class="panel scroll"><table class="table commands"><thead><tr><th>Redeem</th><th class="num">Cost</th><th>Cooldown</th><th>What happens</th></tr></thead>
+            <tbody><tr><td class="nowrap"><strong>Spawn bubbles!</strong></td>
+                    <td class="num">50</td>
+                    <td class="nowrap">none</td>
+                    <td>The bubble pipe blows bubbles for 4 seconds. Redeems stack the time.</td></tr>
+                <tr><td class="nowrap"><strong>Tongue</strong></td>
+                    <td class="num">100</td>
+                    <td class="nowrap">none</td>
+                    <td>The otter sticks out its tongue for 10 seconds.</td></tr>
+                <tr><td class="nowrap"><strong>Feed the otter</strong></td>
+                    <td class="num">100</td>
+                    <td class="nowrap">30 s</td>
+                    <td>The otter munches a fish and the Tamagotter's hunger goes up.</td></tr>
+                <tr><td class="nowrap"><strong>Hydrate</strong></td>
+                    <td class="num">100</td>
+                    <td class="nowrap">2 min</td>
+                    <td>The Tamagotter's thirst goes up and a "Drink up!" reminder stays until the streamer actually drinks.</td></tr>
+                <tr><td class="nowrap"><strong>Pixelate me!</strong></td>
+                    <td class="num">200</td>
+                    <td class="nowrap">none</td>
+                    <td>The otter is pixelated for a minute. Every next redeem makes it blockier and adds 10 seconds. The 5th in a row makes the otter explode.</td></tr>
+                <tr><td class="nowrap"><strong>Click the fishes</strong></td>
+                    <td class="num">200</td>
+                    <td class="nowrap">5 min</td>
+                    <td>A fish drops onto the monitor every 2 seconds for a minute (30 fish). Click them into the otter's mouth to earn points.</td></tr>
+                <tr><td class="nowrap"><strong>TTS</strong></td>
+                    <td class="num">201</td>
+                    <td class="nowrap">none</td>
+                    <td>
+                        Your message is read out with the fancier voice.
+                        Tones: <code>[happy]</code> <code>[sad]</code> <code>[calm]</code> <code>[whispers]</code> <code>[shouting]</code> <code>[laughs]</code> <code>[excited]</code> <code>[sarcastic]</code>.
+                        Voices: <code>{george}</code> <code>{rachel}</code> <code>{adam}</code> <code>{charlotte}</code>.
+                        Example: <code>{rachel} [whispers] psst {adam} [shouting] WHAT?</code></td></tr>
+                <tr><td class="nowrap"><strong>Change costume</strong></td>
+                    <td class="num muted nowrap">see Twitch</td>
+                    <td class="nowrap">15 min</td>
+                    <td>Type a costume and the otter changes outfit: normal, sunglasses, party, classy, french, franken, steve, cheese, naked, fancy. An unknown costume is refunded.</td></tr></tbody></table></section>
+
+    <h2 id="halloween" class="section-title">Halloween (October only)</h2>
+    <section class="panel scroll"><table class="table commands"><thead><tr><th>Redeem</th><th class="num">Cost</th><th>Cooldown</th><th>What happens</th></tr></thead>
+            <tbody><tr><td class="nowrap"><strong>Trick or Treat!</strong></td>
+                    <td class="num">300</td>
+                    <td class="nowrap">1 min</td>
+                    <td>60% chance of a treat: 10 to 25 candy and candy rains down. Otherwise a random trick: a ghost fish parade (catch them for candy), a pixelated otter, 8 seconds of bubble rain, or a random Halloween costume for 2 minutes.</td></tr>
+                <tr><td class="nowrap"><strong>Halloween costume</strong></td>
+                    <td class="num">500</td>
+                    <td class="nowrap">15 min</td>
+                    <td>Type a costume and the otter wears it for 15 minutes: witch, pumpkin, cat, ghost, franken. An unknown costume is refunded. While it is on, "Change costume" is paused, and the other way around.</td></tr></tbody></table></section>
+    <section class="panel scroll"><table class="table commands"><thead><tr><th>Command</th><th>What happens</th><th>How to use</th><th>Cooldown</th></tr></thead>
+            <tbody><tr><td><code>!candy</code><span class="aliases">!candies, !snoep</span></td>
+                    <td>How much candy you collected and your rank.</td>
+                    <td></td>
+                    <td class="nowrap">10 s each</td></tr>
+                <tr><td><code>!candytop</code><span class="aliases">!candyleaderboard, !candylb</span></td>
+                    <td>The top 5 candy collectors and the total candy collected.</td>
+                    <td></td>
+                    <td class="nowrap">15 s</td></tr>
+                <tr><td><code>!pumpkin</code><span class="aliases">!mypumpkin, !pompoen</span></td>
+                    <td>Shows off your carved pumpkin on the river.</td>
+                    <td><code>!pumpkin</code> shows your newest pumpkin, <code>!pumpkin &lt;name&gt;</code> picks one of yours by name.</td>
+                    <td class="nowrap">60 s each</td></tr></tbody></table></section>
+
+    <h2 id="overlay" class="section-title">Clicking the overlay</h2>
+    <section class="panel"><p>With the <strong>Heat</strong> extension you can click right on the stream:</p>
+        <ul class="list"><li>Click a fish to catch it and earn points: normal fish 1, gold fish 2, rainbow fish 5. Check them with <code>!points</code>.</li>
+            <li>Click a bubble to pop it. Clicking empty space sometimes spawns a new one.</li>
+            <li>Boop the otter's nose or pat its head.</li>
+            <li>In October, caught fish and popped candy bubbles also give candy. Check it with <code>!candy</code>.</li></ul></section></main>
+    <footer>Updated 28 October 2026</footer></body></html>
